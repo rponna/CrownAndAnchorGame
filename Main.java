@@ -37,7 +37,8 @@ public class Main {
             
             for (int i = 0; i < 100; i++)
             {
-				System.out.print("Please enter bet amount:");
+				System.out.println("Min and max wagers for this game are 5 and 15 res.");
+            	System.out.print("Please enter bet amount:");
 				int bet = Integer.parseInt(console.readLine());
             	int limit = 0;
                 player = new Player(name, balance);
