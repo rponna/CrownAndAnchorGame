@@ -76,13 +76,15 @@ public class Main {
 
                 System.out.print(String.format("%d turns later.\nEnd Game %d: ", turn, i+1));
                 System.out.println(String.format("%s now has balance %d\n", player.getName(), player.getBalance()));
-                
+                System.out.print("Please enter 'q' to quit, or any other key to continue to play: ");
+				String ans = console.readLine();
+				if (ans.equals("q")) break;
             } //for
             
             System.out.println(String.format("Win count = %d, Lose Count = %d, %.2f", winCount, loseCount, (float) winCount/(winCount+loseCount)));
             totalWins += winCount;
             totalLosses += loseCount;
-            System.out.print("Please enter 'q' to quit, or any other key to continue to play: ");
+			System.out.print("Please enter 'q' to quit, or any other key to continue to play: ");
             String ans = console.readLine();
             if (ans.equals("q")) break;
         } //while true
