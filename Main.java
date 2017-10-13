@@ -10,8 +10,11 @@ public class Main {
         Dice d1 = new Dice();
         Dice d2 = new Dice();
         Dice d3 = new Dice();
-
-        Player player = new Player("Fred", 100);
+		
+		System.out.print("Please enter your name:");
+		String name = console.readLine();
+		
+        Player player = null;
         Game game = new Game(d1, d2, d3);
         List<DiceValue> cdv = game.getDiceValues();
 
@@ -25,7 +28,7 @@ public class Main {
             
             for (int i = 0; i < 100; i++)
             {
-            	String name = "Fred";
+            	
             	int balance = 100;
             	int limit = 0;
                 player = new Player(name, balance);
