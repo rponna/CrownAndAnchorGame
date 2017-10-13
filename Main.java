@@ -14,6 +14,13 @@ public class Main {
 		System.out.print("Please enter your name:");
 		String name = console.readLine();
 		
+		System.out.print("Please enter your age:");
+		int age = Integer.parseInt(console.readLine());
+		if(age < 18)
+		{
+			System.out.println("A person under the age of 18 years shall not participate in the game. \n Exiting the game.");
+			return;
+		}
         Player player = null;
         Game game = new Game(d1, d2, d3);
         List<DiceValue> cdv = game.getDiceValues();
@@ -26,7 +33,7 @@ public class Main {
             int winCount = 0;
             int loseCount = 0;
             
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 1; i++)
             {
             	
             	int balance = 100;
