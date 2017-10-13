@@ -21,6 +21,8 @@ public class Main {
 			System.out.println("A person under the age of 18 years shall not participate in the game. \n Exiting the game.");
 			return;
 		}
+		System.out.print("Please enter balance amount:");
+		int balance = Integer.parseInt(console.readLine());
         Player player = null;
         Game game = new Game(d1, d2, d3);
         List<DiceValue> cdv = game.getDiceValues();
@@ -35,13 +37,12 @@ public class Main {
             
             for (int i = 0; i < 100; i++)
             {
-            	
-            	int balance = 100;
+				System.out.print("Please enter bet amount:");
+				int bet = Integer.parseInt(console.readLine());
             	int limit = 0;
                 player = new Player(name, balance);
                 player.setLimit(limit);
-                int bet = 5;
-
+                
                 System.out.println(String.format("Start Game %d: ", i+1));
                 System.out.println(String.format("%s starts with balance %d, limit %d", 
                 		player.getName(), player.getBalance(), player.getLimit()));
