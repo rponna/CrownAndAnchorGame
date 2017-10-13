@@ -33,7 +33,7 @@ public class Main {
             int winCount = 0;
             int loseCount = 0;
             
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 10; i++)
             {
             	
             	int balance = 100;
@@ -82,7 +82,7 @@ public class Main {
             System.out.println(String.format("Win count = %d, Lose Count = %d, %.2f", winCount, loseCount, (float) winCount/(winCount+loseCount)));
             totalWins += winCount;
             totalLosses += loseCount;
-
+            System.out.print("Please enter 'q' to quit, or any other key to continue to play: ");
             String ans = console.readLine();
             if (ans.equals("q")) break;
         } //while true
